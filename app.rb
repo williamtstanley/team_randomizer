@@ -26,7 +26,7 @@ post "/" do
     @method = params[:method]
     @number = params[:number].to_i
     @names_array = @names.split(",").shuffle
-    if @names != "" && @number != 0
+    if @names != "" && @number != 0 && @number < @names_array.length
         if @method == "team_count"
             @number_of_teams = @number
         else
