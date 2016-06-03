@@ -69,6 +69,7 @@ label {
 .container {
     max-width: 960px;
     width: 100%;
+    min-height: 900px;
     margin: 0 auto;
 }
 
