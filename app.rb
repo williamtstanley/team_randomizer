@@ -1,6 +1,9 @@
+require 'rubygems'
+require 'bundler/setup'
+
 require 'sinatra'
-require 'sinatra/reloader'
-require 'pry'
+# require 'sinatra/reloader'
+
 
 enable :sessions
 use Rack::MethodOverride
