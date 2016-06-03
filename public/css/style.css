@@ -58,6 +58,12 @@ span.input-label {
     font-size: 14px;
 }
 
+span.error {
+    font-family: 'open sans', sans-serif;
+    font-size: 20px;
+    color: red;
+}
+
 label {
     font-size: 18px;
     font-weight: 400;
