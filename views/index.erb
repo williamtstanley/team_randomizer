@@ -8,12 +8,12 @@
         </div>
         <div>
             <label for="">Method</label>
-            <input type="radio" name="method" value="team_count">Team Count
-            <input type="radio" name="method" value="num_per_team">Number per Team
+            <input type="radio" name="method" value="team_count" checked><span class="input-label">Team Count</span>
+            <input type="radio" name="method" value="num_per_team"><span class="input-label">Number per Team</span>
         </div>
         <div>
             <label for="">Number</label>
-            <input type="text" name="number" value="">
+            <input type="text" name="number" value=1>
         </div>
         <input type="submit" name="button" value="Submit">
 
@@ -25,7 +25,9 @@
     <% if session[:team_hash] %>
         <% session[:team_hash].each do |team, members| %>
             <div class="team-grid">
-                <h3><%= team.to_s %></h3>
+                <div class="team-grid-title">
+                    <h3><%= team.to_s %></h3>
+                </div>
                 <ul>
                     <% members.each do |name| %>
                         <li><%= name %></li>

@@ -1,8 +1,13 @@
+html {
+    -webkit-font-smoothing: antialiased;
+    -moz-=osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
 body, html {
     font-size: 20px;
     margin: 0;
     padding: 0;
-    background-color: #fbd580;
 }
 nav {
     display: -webkit-box;
@@ -31,25 +36,141 @@ nav a {
 nav a:hover {
     background-color: #fbd580;
 }
+
+h1, h3, p, label, input, li {
+    font-family: 'open sans', sans-serif;
+}
+
 h1 {
     text-align: center;
-    font-family: sans-serif;
     color: rgb(176, 66, 26);
 }
-h4, label {
+
+h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(176, 66, 26);
+}
+
+span.input-label {
+    font-family: 'open sans', sans-serif;
+    font-size: 14px;
+}
+
+label {
+    font-size: 18px;
+    font-weight: 400;
     margin-bottom: 4px;
     margin-top: 4px;
     color: rgb(176, 66, 26);
 }
+
+.container {
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.form-container div {
+    margin-bottom: 15px;
+}
+
+.form-container div:first-child label,
+.form-container div:nth-child(3) label {
+    display: block;
+}
+
+.form-container div:nth-child(2) label,
+.form-container div:nth-child(2) input {
+    margin-right: 10px;
+}
+
+.form-container input[type="text"] {
+    font-family: 'open sans', sans-serif;
+    font-size: 16px;
+    width: 96%;
+    padding: 10px 2%;
+}
+
+.form-container textarea {
+    width: 96%;
+    border: solid 1px #ccc;
+
+    font-family: 'open sans', sans-serif;
+    font-size: 16px;
+
+    padding: 10px 2%;
+}
+
+.form-container input[type="submit"] {
+    background-color: rgb(176, 66, 26);
+    color: white;
+    padding: 10px 18px;
+
+    font-family: 'open sans', sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: solid 1px #eee;
+
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    -ms-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+
+    cursor: pointer;
+}
+
+.form-container input[type="submit"]:hover {
+    border: solid 1px rgb(176, 66, 26);
+    color: rgb(176, 66, 26);
+    background-color: transparent;
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    -ms-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+}
+
 .top-form {
     display: inline-block;
 }
 .team-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-flow: wrap;
+    margin-top: 40px;
 }
 .team-grid {
     width: 22%;
+    padding-bottom: 1.5%;
+    margin-bottom: 20px;
+    border: solid 1px rgb(176, 66, 26);
+}
 
+.team-grid ul {
+    padding-left: 13px;
+    padding-right: 13px;
+    list-style: none;
+}
+
+.team-grid-title {
+    background-color: rgb(176, 66, 26);
+    padding-top: 10px;
+    padding-bottom: 8px;
+}
+
+.team-grid h3 {
+    padding-bottom: 5px;
+    color: white;
+    border-bottom: solid 1px rgb(176, 66, 26);
+    padding-left: 13px;
+    paddin-right: 13px;
+}
+
+.team-grid li {
+    font-size: 16px;
+    margin-bottom: 5px;
 }

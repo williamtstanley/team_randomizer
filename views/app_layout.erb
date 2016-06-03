@@ -3,14 +3,19 @@
     <head>
         <meta charset="utf-8">
         <title><%= @title %></title>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="/css/style.css" media="screen" title="no title" charset="utf-8">
     </head>
     <body>
         <nav>
             <a href="/">home</a>
         </nav>
-
-        <%= yield %>
+        
+        <div class="content">
+            <div class="container">
+                <%= yield %>
+            </div>
+        </div>
 
     </body>
 </html>
