@@ -24,20 +24,20 @@ post "/" do
     @names = params[:names]
     @method = params[:method]
     @number = params[:number].to_i
-    @names_array = @names.split(",").shuffle
-    session[:team_hash] = {}
-    if @method == "team_count"
-        @number_of_teams = @names_array.length / @number
-    else
-        @number_of_teams = @number
-    end
 
-
-    team_array = @names_array.each_slice(@number_of_teams).to_a
-    team_array.each_index do |index|
-         session[:team_hash][("Team " + (index+1).to_s).to_sym] = team_array[index]
+    if @names != "" && @number != 0
+        @names_array = @names.split(",").shuffle
+        session[:team_hash] = {}
+        if @method == "team_count"
+            @number_of_teams = @names_array.length / @number
+        else
+            @number_of_teams = @number
+        end
+        team_array = @names_array.each_slice(@number_of_teams).to_a
+        team_array.each_index do |index|
+            session[:team_hash][("Team " + (index+1).to_s).to_sym] = team_array[index]
+        end
     end
-    puts params
     redirect to ("/")
 end
 
