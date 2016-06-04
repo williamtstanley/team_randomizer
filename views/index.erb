@@ -4,7 +4,7 @@
     <form class="" action="/" method="post">
         <div>
             <label for="">Names</label>
-            <textarea name="names" rows="8" cols="40" placeholder="list of names (comma seperated)"></textarea>
+            <textarea name="names" rows="8" cols="40" placeholder="list of names (comma seperated)"><%= session[:names] || "" %></textarea>
         </div>
         <div>
             <label for="">Method</label>

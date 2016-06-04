@@ -26,8 +26,10 @@ post "/" do
     @number = params[:number].to_i
     @names_array = @names.split(",").shuffle
     session[:error] = ""
+    session[:names] = ""
     if @number > @names_array.length
         session[:error] = "INVALID ENTRY(Number cannot exceed number of names)"
+        session[:names] = @names
     end
     if @names != "" && @number != 0 && @number < @names_array.length
         if @method == "team_count"
